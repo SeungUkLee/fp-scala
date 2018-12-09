@@ -91,23 +91,16 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-.idea/compiler.xml
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/modules/
-.idea/sbt.xml
-.idea/scala_compiler.xml
-.idea/vcs.xml
-build.sbt
-project/build.properties
-project/target/config-classes/$5431d75a1848ae5dd5a9.cache
-project/target/config-classes/$810c2e4652d298e7940d.cache
-project/target/config-classes/$81645df54b70ea922b5f.cache
-project/target/scala-2.12/
-project/target/streams/
-src/
-target/.history
-target/scala-2.12/classes/generated/
-target/scala-2.12/resolution-cache/
-target/streams/
+### SBT ###
+# Simple Build Tool
+# http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
+
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.history
+.cache
+.lib/
