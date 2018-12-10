@@ -1,13 +1,14 @@
 package ch2
 
-object ch2 {
+object Ch2 {
 
+  // exercise 2-1
   def fib(n: Int): Int = {
-    def loop(n: Int): Int = {
-      if (n == 0) 0
-      else if (n == 1) 1
-      else loop(n-1) + loop(n-2)
+    @annotation.tailrec
+    def loop(n: Int, pre: Int, cur: Int): Int = {
+      if (n == 0) cur
+      else loop(n-1, pre+cur, pre)
     }
-    loop(n)
+    loop(n, 1, 0)
   }
 }
