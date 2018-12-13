@@ -20,4 +20,28 @@ object List {
     if (as.isEmpty) Nil
     else Cons(as.head, apply(as.tail: _*))
   }
+
+  def tail[A](l: List[A]): List[A] = l match {
+    case Nil => Nil
+    case Cons(h, xs) => xs
+  }
+
+  def setHead[A](l: List[A], h: A): List[A] = l match {
+    case Nil => Nil
+    case Cons(_, xs) => Cons(h, xs)
+  }
+
+  def drop[A](l: List[A], n: Int): List[A] = l match {
+    case Nil => Nil
+    case _ if n == 0 => l
+    case Cons(_, xs) => drop(xs, n-1)
+  }
+
+  def dropWhile[A](l: List[A], f: A => Boolean): List[A] = l match {
+    case Nil => Nil
+    case Cons(h, xs) if f(h) => dropWhile(xs, f)
+    case _ => l
+  }
+
+
 }
