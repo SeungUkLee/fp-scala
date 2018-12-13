@@ -29,4 +29,8 @@ class Ch2Suite extends FunSuite {
   test("[exercise 2-3]") {
     assert(curry((a:Int, b:Int) => a == b)(1)(1))
   }
+
+  test("[exercise 2-5]") {
+    assert(compose((a:Int) => "new value " + a, (a:Int) => 2 * a)(2) === "new value 4")
+  }
 }
