@@ -23,4 +23,8 @@ object Ch2 {
     loop(0)
   }
 
+  // exercise 2-3
+  def curry[A, B, C](f: (A, B) => C): A => (B => C) = {
+    a => b => f(a,b)
+  }
 }

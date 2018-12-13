@@ -25,4 +25,8 @@ class Ch2Suite extends FunSuite {
     assert(isSorted(Array(1,2,3), (a: Int, b: Int) => a <= b))
     assert(isSorted(Array(3,2,1), (a: Int, b: Int) => a >= b))
   }
+
+  test("[exercise 2-3]") {
+    assert(curry((a:Int, b:Int) => a == b)(1)(1))
+  }
 }
