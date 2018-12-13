@@ -20,4 +20,9 @@ class Ch2Suite extends FunSuite {
     assert(fib(5) === 5)
     assert(fib(6) === 8)
   }
+
+  test("[exercise 2-2]") {
+    assert(isSorted(Array(1,2,3), (a: Int, b: Int) => a <= b))
+    assert(isSorted(Array(3,2,1), (a: Int, b: Int) => a >= b))
+  }
 }
