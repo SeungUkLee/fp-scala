@@ -27,4 +27,8 @@ class Ch3Suite extends FunSuite {
   test("[exercise 3-5]") {
     assert(List.dropWhile(List(1,3,2,4,6), (x:Int) => (x < 3)) === Cons(3, Cons(2, Cons(4, Cons(6, Nil)))))
   }
+
+  test("[exercise 3-6]") {
+    assert(List.init(List(1,2,3,4,5)) === Cons(1, Cons(2, Cons(3, Cons(4, Nil)))))
+  }
 }
