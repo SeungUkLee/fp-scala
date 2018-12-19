@@ -48,4 +48,18 @@ object List {
     case Cons(h, xs) => Cons(h, init(xs))
   }
 
+  def foldRight[A, B](as: List[A], z: B)(f: (A, B) => B): B = as match {
+    case Nil => z
+    case Cons(x, xs) => f(x, foldRight(xs, z)(f))
+  }
+  /* exercise 3-9 foldRight 를 이용하여 목록의 길이를 계산 */
+  def length[A](as: List[A]): Int = {
+    foldRight(as, 0)((_, acc) => acc + 1)
+  }
+
+  /* exercise 3-10 */
+  def foldLeft[A, B](as: List[A], z: B)(f: (B, A) => B): B = as match {
+    case Nil => z
+    case Cons(x, xs) => foldLeft(xs, f(z, x))(f)
+  }
 }
