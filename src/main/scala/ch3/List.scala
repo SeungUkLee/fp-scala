@@ -63,4 +63,14 @@ object List {
     case Nil => z
     case Cons(x, xs) => foldLeft(xs, f(z, x))(f)
   }
+
+  /* exercise 3-11 */
+  def sumUseFoldLeft(): Int = {
+    foldLeft(as, 0)((acc, x) => acc + x)
+  }
+
+  /* exercise 3-11 */
+  def productUseFoldLeft(): Double =  {
+    foldLeft(as, 0.0)((acc, h) => acc * h)
+  }
 }
