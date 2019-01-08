@@ -65,12 +65,12 @@ object List {
   }
 
   /* exercise 3-11 */
-  def sumUseFoldLeft(): Int = {
+  def sumUseFoldLeft(as: List[Int]): Int = {
     foldLeft(as, 0)((acc, x) => acc + x)
   }
 
   /* exercise 3-11 */
-  def productUseFoldLeft(): Double =  {
+  def productUseFoldLeft(as: List[Double]): Double =  {
     foldLeft(as, 0.0)((acc, h) => acc * h)
   }
 }
