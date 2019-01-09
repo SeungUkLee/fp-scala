@@ -31,4 +31,8 @@ class Ch3Suite extends FunSuite {
   test("[exercise 3-6]") {
     assert(List.init(List(1,2,3,4,5)) === Cons(1, Cons(2, Cons(3, Cons(4, Nil)))))
   }
+
+  test("[exercise 3-12]") {
+    assert(List.reverse(List(1,2,3)) === Cons(3, Cons(2, Cons(1, Nil))))
+  }
 }

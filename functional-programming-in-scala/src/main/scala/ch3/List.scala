@@ -73,4 +73,9 @@ object List {
   def productUseFoldLeft(as: List[Double]): Double =  {
     foldLeft(as, 0.0)((acc, h) => acc * h)
   }
+
+  /* exercise 3-12 */
+  def reverse[A](xs: List[A]): List[A] = {
+    foldLeft(xs, List[A]())((acc, x) => Cons(x, acc))
+  }
 }
